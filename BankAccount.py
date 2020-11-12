@@ -30,18 +30,16 @@ class BankAccount:
     def withdrawl(self, amount):
         if amount > self.balance:
             print(f"Insufficient funds")
+            self.balance -= 10
         elif amount <= self.balance:
-            withdrawl_ammount = self.balance - amount
+            self.balance -= amount
             print(f"Amount Withdrawn: ${amount}")
-            print(f"New Balance: ${withdrawl_ammount}")
-
+            print(f"New Balance: ${self.balance}")
 #Users
 jordan = BankAccount("Jordan Torres", 1200)
 jacob = BankAccount("Jacob Abrahams", 4000)
 brittany = BankAccount("Brittany Gilmore", 10000)
 
-jordan.deposit(100)
-jacob.withdrawl(3000)
+jordan.withdrawl(3000)
+brittany.deposit(10)
 jacob.print_receipt()
-brittany.withdrawl(3000)
-brittany.print_receipt()

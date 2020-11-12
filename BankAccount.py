@@ -1,6 +1,7 @@
 import random
 class BankAccount:
     routing_number = 121042882
+    balance = 0
 
     def __init__(self, name, balance):
         self.account = random.randint(000000000, 999999999)

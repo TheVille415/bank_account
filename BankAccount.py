@@ -12,8 +12,8 @@ class BankAccount:
         print(f"Balance: ${self.balance}")
 
     def print_receipt(self):
-        new_balance = str(self.balance)
-        last_char = new_balance[-4:]
+        hidden_account = str(self.account)
+        last_char = hidden_account[-4:]
         print(f"{self.name}")
         print(f"Account No.: XXXX{last_char}")
         print(f"Routing No.: {self.routing_number}")
@@ -43,3 +43,4 @@ brittany = BankAccount("Brittany Gilmore", 10000)
 jordan.withdrawl(3000)
 brittany.deposit(10)
 jacob.print_receipt()
+jordan.print_receipt()
